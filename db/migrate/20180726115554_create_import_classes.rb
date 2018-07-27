@@ -2,7 +2,7 @@ class CreateImportClasses < ActiveRecord::Migration[5.0]
   def change
     create_table :dishes do |t|
       t.integer :external_id
-      t.integer :import_id
+      t.references :import, foreign_key: true, null: false
       t.string :name
       t.text :description
       t.integer :menus_appeared
@@ -11,16 +11,17 @@ class CreateImportClasses < ActiveRecord::Migration[5.0]
       t.integer :last_appeared
       t.decimal :lowest_price
       t.decimal :highest_price
+      t.index [:import_id, :external_id]
     end
 
     create_table :menus do |t|
       t.integer :external_id
-      t.integer :import_id
+      t.references :import, foreign_key: true, null: false
       t.string :name
       t.string :sponsor
-      t.string :event
-      t.string :venue
-      t.string :place
+      t.string :event, index: true
+      t.string :venue, index: true
+      t.string :place, index: true
       t.string :physical_description
       t.string :occasion
       t.text :notes
@@ -35,11 +36,12 @@ class CreateImportClasses < ActiveRecord::Migration[5.0]
       t.string :status
       t.integer :page_count
       t.integer :dish_count
+      t.index [:import_id, :external_id]
     end
 
     create_table :menu_items do |t|
       t.integer :external_id
-      t.integer :import_id
+      t.references :import, foreign_key: true, null: false
       t.integer :menu_page_id
       t.decimal :price
       t.decimal :high_price
@@ -50,17 +52,19 @@ class CreateImportClasses < ActiveRecord::Migration[5.0]
       t.decimal :ypos
 
       t.timestamps
+      t.index [:import_id, :menu_page_id]
     end
 
     create_table :menu_pages do |t|
       t.integer :external_id
-      t.integer :import_id
+      t.references :import, foreign_key: true, null: false
       t.integer :menu_id
       t.integer :page_number
       t.bigint :image_id
       t.integer :full_height
       t.integer :full_width
       t.string :uuid
+      t.index [:import_id, :external_id]
     end
   end
 end
