@@ -31,6 +31,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rubocop'
+  gem 'rspec-rails', '~> 3.7'
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -48,3 +50,6 @@ gem 'activerecord-import'
 gem 'rcsv'
 gem 'bootstrap', '~> 4.1.3'
 gem 'rubyzip', require: false
+
+gem 'delayed_job_active_record'
+gem 'daemons' # Used for running DelayedJob
