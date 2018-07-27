@@ -1,0 +1,101 @@
+id,name,description,menus_appeared,times_appeared,first_appeared,last_appeared,lowest_price,highest_price
+1,Consomme printaniere royal,,8,9,1897,1927,0.2,0.4
+2,Chicken gumbo,,110,116,1895,1960,0.1,0.8
+3,Tomato aux croutons,,13,13,1893,1917,0.25,0.4
+4,Onion au gratin,,41,41,1900,1971,0.25,1.0
+5,St. Emilion,,66,68,1881,1981,0.0,18.0
+7,Radishes,,3265,3349,1854,2928,0.0,25.0
+8,Chicken soup with rice,,48,49,1897,1961,0.1,0.6
+9,Clam broth (cup),,15,17,1899,1962,0.15,0.4
+10,"Cream of new asparagus, croutons",,2,2,1900,1900,0.0,0.0
+11,Clear green turtle,,157,157,1893,1937,0.25,60.0
+12,"Striped bass saute, meuniere",,2,2,1900,1900,0.0,0.0
+13,Anchovies,,453,484,1858,1987,0.0,30.0
+14,Fresh lobsters in every style,,4,4,1899,1900,0.0,0.0
+15,Celery,,4247,4691,1,2928,0.0,50.0
+16,Pim-olas,,145,148,1897,1918,0.15,35.0
+17,Caviar,,505,534,1880,1987,0.0,75.0
+18,Sardines,,1425,1483,1856,2928,0.0,50.0
+19,India chutney,,16,16,1865,1901,0.1,0.2
+20,Pickles,,454,473,1852,1987,0.0,10.0
+21,English walnuts,,83,86,1851,1948,0.1,0.3
+22,Pate de foies-gras,,9,9,1898,1901,1.0,1.0
+23,Pomard,,11,11,1880,1950,0.75,5.0
+24,"Brook trout, mountain style",,2,2,1900,1900,0.0,0.0
+25,"Whitebait, sauce tartare",,4,4,1900,1901,0.3,0.75
+26,Clams,,171,181,1881,1970,0.1,0.9
+27,Oysters,,289,292,1862,1963,0.0,35.0
+28,Claremont planked shad,,2,2,1899,1900,1.5,2.5
+29,G. H. Mumm & Co's Extra Dry,,14,14,1895,1914,2.0,4.0
+30,Cerealine with Milk,,1,1,1901,1901,0.0,0.0
+31,Sliced Bananas,,220,238,1900,1987,0.0,15.0
+32,Wheat Vitos,,3,3,1900,1900,0.0,0.0
+33,Sliced Tomatoes,,1195,1256,1873,2928,0.0,25.0
+34,Russian Caviare on Toast,,3,3,1900,1900,,
+35,Smoked beef in cream,,21,21,1896,1933,0.3,0.9
+38,Apple Sauce,,720,829,1,1987,0.0,20.0
+39,Potage a la Victoria,,5,5,1899,1901,,
+40,Breakfast,,28,28,1900,1967,0.25,1.0
+41,Strawberries,,303,338,1854,1985,0.0,50.0
+42,Preserved figs,,257,259,1889,1969,0.0,30.0
+43,BLUE POINTS,,869,892,1881,1968,0.15,50.0
+44,CONSOMME ANGLAISE,,5,5,1900,1907,0.2,0.25
+45,CREAM OF CAULIFLOWER,,18,18,1899,1949,0.1,0.5
+46,"BROILED SHAD, A LA MAITRE D'HOTEL",,6,6,1896,1900,0.0,0.0
+47,SLICED CUCUMBERS,,455,458,1881,1964,0.0,25.0
+48,SALTED ALMONDS,,774,783,1889,2012,0.0,10.0
+49,"POTATOES, JULIEN",,3,3,1900,1900,0.0,0.0
+50,Cracked Wheat,,120,124,1859,1917,0.1,0.3
+51,Malt Breakfast Food,,63,64,1899,1917,0.1,0.35
+52,"BOILED BEEF TONGUE, ITALIAN SAUCE",,3,3,1900,1900,0.0,0.0
+53,Young Onions,,157,157,1894,1949,0.05,10.0
+54,Pears,,631,650,1852,1974,0.0,50.0
+55,"ROAST SIRLOIN OF BEEF, YORKSHIRE PUDDING",,11,12,1900,1974,0.0,0.75
+57,Huhnerbruhe,,11,11,1900,1901,0.0,0.0
+58,"ROAST EASTER LAMB, MINT SAUCE",,4,4,1899,1900,0.0,0.0
+59,Rockaways,,157,162,1889,1948,0.2,50.0
+60,Hafergrutze,,206,219,1899,1910,,
+61,BROWNED POTATOES,,55,58,1893,1980,0.25,20.0
+62,Pampelmuse,,30,30,1900,1910,0.0,0.0
+63,Apfelsinen,,181,184,1899,1935,,
+64,Ananas,,94,104,1884,1978,0.0,0.95
+65,Milchreis,,135,135,1899,1910,,
+66,Grape fruit,,715,749,1895,1968,0.0,2540.0
+67,Oranges,,1423,1479,1851,2012,0.0,25.0
+68,Clam Fritters,,258,270,1880,1959,0.15,50.0
+69,Filet v. Schildkrote m. Truffeln,,3,3,1900,1900,0.0,0.0
+70,"Bouillon, en Tasse",,17,17,1897,1906,0.2,0.25
+71,Spargel Suppe,,4,4,1899,1900,0.0,0.0
+72,"Kraftsuppe, konigliche Art",,2,2,1900,1900,0.0,0.0
+73,Rissoles a la Merrill,,4,4,1900,1900,0.0,0.0
+75,S. Julien,,4,4,1900,1900,0.75,1.5
+76,Chambertin,,239,251,1851,1977,0.0,250.0
+77,St. Julien,,336,391,1851,1970,0.0,175.0
+78,Vegetable,,107,115,1892,1987,0.0,1.75
+80,Puree of split peas aux croutons,,11,11,1900,1917,0.05,0.35
+81,Consomme in cup,,128,128,1896,1949,0.0,20.0
+82,"Broiled shad, Maitre d'hotel",,27,27,1889,1937,0.3,0.9
+83,Mashed potatoes,,2586,2676,1852,2012,0.0,15.0
+84,Breaded veal cutlet with peas,,3,3,1900,1900,0.0,0.0
+86,Hind-quarter of spring lamb with stuffed tomatoes,,3,3,1900,1900,0.0,0.0
+87,Hot or cold ribs of beef,,1,1,1900,1900,,
+88,Doucette salad,,7,7,1900,1910,0.0,0.0
+89,New beets,,134,139,1865,1981,0.05,0.5
+90,Salisbury steak au cresson,,1,1,1900,1900,0.0,0.0
+91,Boiled rice,,830,839,1859,1969,0.0,25.0
+92,Stewed oyster plant,,28,28,1884,1901,0.1,0.4
+93,"Boiled onions, cream sauce",,46,48,1893,1940,0.05,0.45
+94,Old fashioned rice pudding,,16,22,1899,1945,0.15,0.3
+95,Ice cream,,1066,1186,1880,1993,0.0,20.0
+96,Coffee,,7741,8485,1,2928,0.0,30.0
+97,Tea,,4158,4768,1858,2012,0.0,25.0
+98,Milk,,1896,2294,1890,2012,0.0,45.0
+99,Mush,,18,18,1853,1915,0.05,0.15
+100,Rolled Oats,,104,113,1900,1989,0.0,0.35
+101,Small Hominy,,20,20,1900,1900,0.0,0.0
+102,Broiled Mackerel,,41,44,1856,1957,0.3,2.5
+103,Kippered Herring,,231,236,1,1970,0.0,0.85
+104,Strawberries with cream,,146,150,1882,1969,0.0,65.0
+105,Compote of fruits,,42,42,1899,1966,0.0,1.15
+106,Orange marmalade,,460,479,1889,1970,0.0,4.5
+107,Baked apples with cream,,141,144,1883,1945,0.1,20.0
