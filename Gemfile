@@ -47,7 +47,7 @@ end
 gem 'activerecord-import'
 gem 'bootstrap', '~> 4.1.3'
 gem 'rcsv'
-gem 'rubyzip', require: false
+gem 'rubyzip', '~> 1.2.1', require: false
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'daemons' # Used for running DelayedJob
