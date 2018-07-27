@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Attributes</h2>
+<dl class="row">
+  <dt class="col-sm-3">Import</dt>
+  <dd class="col-sm-9"><%= link_to "Import #{@menu.import_id}", @menu.import %></dd>
+<% [
+  :external_id, :name, :sponsor, :event, :venue, :place,
+  :physical_description, :notes, :keywords, :occasion,:call_number,:language,
+  :date, :location, :location_type, :status, :page_count, :dish_count
+].each do |col| %>
+  <dt class="col-sm-3"><%= col.to_s.humanize %></dt>
+  <dd class="col-sm-9"><%= null_helper @menu[col] %></dd>
+<% end %>
+</dl>
+
+<h2>Menu</h2>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Dish</th>
+    <th>Description</th>
+    <th>Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @menu.menu_pages.order(:page_number).each do |page| %>
+    <tr>
+      <td colspan="3"><strong>Page <%= page.page_number %></strong></td>
+    </tr>
+
+    <% page.menu_items.each do |item| %>
+    <tr>
+      <td><%= item.dish.name %></td>
+      <td><%= item.dish.description%></td>
+      <td><%= item.price ? "#{@menu.currency_symbol}#{item.price.try!(:to_s)}" : '' %></td>
+    </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>

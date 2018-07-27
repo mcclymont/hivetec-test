@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Menus for import <%= @import.id %></h1>
+
+<label>Date from:</label>
+<input type="date" id="date_from" value="<%= params[:date_from] %>" />
+<label>Date to:</label>
+<input type="date" id="date_to" value="<%= params[:date_to] %>" />
+<button id="filter">Filter</button>
+
+<br />
+<button id="export">Export to JSON</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Menu</th>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Event</th>
+      <th>Venue</th>
+      <th>Place</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @menus.order(date: :desc).each do |menu| %>
+      <tr>
+        <td><%= link_to 'Show', menu %></td>
+        <td><%= menu.name %></td>
+        <td><%= menu.date %></td>
+        <td><%= menu.event %></td>
+        <td><%= menu.venue %></td>
+        <td><%= menu.place %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<script type="application/javascript">
+  $('#filter').on("click", function() {
+    var queryParameters = {}, queryString = location.search.substring(1),
+      re = /([^&=]+)=([^&]*)/g, m;
+
+    while (m = re.exec(queryString)) {
+      queryParameters[decodeURIComponent(m[1])] = m[2];
+    }
+
+    var key = null;
+    ['place', 'event', 'venue'].forEach(function(x) {
+      if (queryParameters[x]) {
+        key = x;
+      }
+    });
+    document.location.search = "?" + key + "=" + queryParameters[key] +
+      '&date_from=' + $('#date_from').val() +
+      '&date_to=' + $('#date_to').val();
+  });
+
+  $('#export').on('click', function() {
+    location.search = location.search + '&export=json';
+  });
+</script>

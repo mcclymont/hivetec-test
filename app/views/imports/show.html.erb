@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+Status: <%= @import.status.capitalize %>
+
+<br />
+
+Menus: <%= @import.menus.count %> |
+Menu items: <%= @import.menu_items.count %> |
+Menu pages: <%= @import.menu_pages.count %> |
+Dishes: <%= @import.dishes.count %>
+
+<br />
+
+<%= link_to 'All Menus',  menus_import_path(@import) %>
+
+<br />
+
+<%= link_to 'Unique places', places_import_path(@import) %> |
+<%= link_to 'Unique venues', venues_import_path(@import) %> |
+<%= link_to 'Unique events', events_import_path(@import) %> |
+
+<br />
+<br />
+<%= link_to 'Back', imports_path %>
