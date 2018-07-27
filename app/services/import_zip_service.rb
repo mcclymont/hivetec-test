@@ -38,7 +38,7 @@ class ImportZipService
           file.get_input_stream.read,
           row_as_hash: true,
           header: :use,
-          columns: header.map { |x| [x, { alias: x }] }.to_h
+          columns: header.map { |x| [x, {alias: x}] }.to_h
         ).map do |row|
           {}.tap do |rvalue|
             header.each { |col| rvalue[col] = row[col] }
