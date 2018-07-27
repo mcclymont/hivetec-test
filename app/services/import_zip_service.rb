@@ -32,6 +32,7 @@ class ImportZipService
         Rails.logger.debug "Importing #{name}"
 
         header = importer[:attributes]
+        klass = importer[:class]
 
         data = Rcsv.parse(
           file.get_input_stream.read,
@@ -46,7 +47,9 @@ class ImportZipService
           end
         end
 
-        importer[:class].import data, validate: false
+        Rails.logger.silence do
+          klass.import data, validate: false, timestamps: klass != MenuItem
+        end
       end
     end
     nil
