@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe ImportZipService do
-
   let(:import) { Import.create! zip_filepath: zip_path }
 
   context 'for a zip file with empty csvs' do
@@ -44,17 +43,17 @@ RSpec.describe ImportZipService do
 
       dish = Dish.find_by(external_id: 1, import_id: import.id)
       expect(dish.attributes.symbolize_keys.except(:id)).to eq(
-                                   external_id: 1,
-                                   import_id: import.id,
-                                   name: 'Consomme printaniere royal',
-                                   description: nil,
-                                   menus_appeared: 8,
-                                   times_appeared: 9,
-                                   first_appeared: 1897,
-                                   last_appeared: 1927,
-                                   lowest_price: 0.2,
-                                   highest_price: 0.4
-                                 )
+        external_id: 1,
+        import_id: import.id,
+        name: 'Consomme printaniere royal',
+        description: nil,
+        menus_appeared: 8,
+        times_appeared: 9,
+        first_appeared: 1897,
+        last_appeared: 1927,
+        lowest_price: 0.2,
+        highest_price: 0.4
+      )
 
       expect(dish.menu_items.count).to eq 1
     end
@@ -62,11 +61,12 @@ RSpec.describe ImportZipService do
     it 'sets the menu attributes correctly' do
       ImportZipService.import! import.zip_filepath, import.id
 
-      menu = Menu.find_by(external_id: 12463, import_id: import.id)
+      menu = Menu.find_by(external_id: 12_463, import_id: import.id)
       expect(
-        menu.attributes.symbolize_keys.except(:id))
+        menu.attributes.symbolize_keys.except(:id)
+      )
         .to eq(
-          external_id: 12463,
+          external_id: 12_463,
           import_id: import.id,
           name: nil,
           sponsor: 'HOTEL EASTMAN',
@@ -97,19 +97,20 @@ RSpec.describe ImportZipService do
 
       page = MenuPage.find_by(external_id: 119, import_id: import.id)
       expect(
-        page.attributes.symbolize_keys.except(:id))
+        page.attributes.symbolize_keys.except(:id)
+      )
         .to eq(
-              external_id: 119,
-              import_id: import.id,
-              menu_id: 12460,
-              page_number: 1,
-              image_id: 1603595,
-              full_height: 7230,
-              full_width: 5428,
-              uuid: '510d47e4-2955-a3d9-e040-e00a18064a99'
-            )
+          external_id: 119,
+          import_id: import.id,
+          menu_id: 12_460,
+          page_number: 1,
+          image_id: 1_603_595,
+          full_height: 7230,
+          full_width: 5428,
+          uuid: '510d47e4-2955-a3d9-e040-e00a18064a99'
+        )
 
-      expect(page.menu).to eq Menu.find_by(import: import, external_id: 12460)
+      expect(page.menu).to eq Menu.find_by(import: import, external_id: 12_460)
       expect(page.menu_items.count).to eq 0
     end
 
@@ -118,19 +119,20 @@ RSpec.describe ImportZipService do
 
       item = MenuItem.find_by(external_id: 1, import_id: import.id)
       expect(
-        item.attributes.symbolize_keys.except(:id))
+        item.attributes.symbolize_keys.except(:id)
+      )
         .to eq(
-              external_id: 1,
-              import_id: import.id,
-              menu_page_id: 1389,
-              price: 0.4,
-              high_price: nil,
-              dish_id: 1,
-              created_at: Time.parse('2011-03-28 15:00:44 UTC'),
-              updated_at: Time.parse('2011-04-19 04:33:15 UTC'),
-              xpos: 0.111429,
-              ypos: 0.254735
-            )
+          external_id: 1,
+          import_id: import.id,
+          menu_page_id: 1389,
+          price: 0.4,
+          high_price: nil,
+          dish_id: 1,
+          created_at: Time.parse('2011-03-28 15:00:44 UTC'),
+          updated_at: Time.parse('2011-04-19 04:33:15 UTC'),
+          xpos: 0.111429,
+          ypos: 0.254735
+        )
 
       expect(item.dish).to eq Dish.find_by(import: import, external_id: 1)
       expect(item.menu_page).to eq MenuPage.find_by(import: import, external_id: 1389)

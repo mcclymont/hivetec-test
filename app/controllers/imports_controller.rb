@@ -33,9 +33,7 @@ class ImportsController < ApplicationController
     @menus = @menus.where(t[:date].gteq(menus_params[:date_from])) if menus_params[:date_from]
     @menus = @menus.where(t[:date].lteq(menus_params[:date_to])) if menus_params[:date_to]
 
-    if params[:export] == 'json'
-      render 'menus.json.jbuilder'
-    end
+    render 'menus.json.jbuilder' if params[:export] == 'json'
   end
 
   def create
@@ -66,11 +64,12 @@ class ImportsController < ApplicationController
   end
 
   def menus_params
-    @menus_params ||= params.slice(:id, :place, :venue, :event)
-      .merge(
-        date_from: (Date.parse(params[:date_from]) rescue nil),
-        date_to: (Date.parse(params[:date_to]) rescue nil)
-    )
+    @menus_params ||=
+      params.slice(:id, :place, :venue, :event)
+            .merge(
+              date_from: (Date.parse(params[:date_from]) rescue nil),
+              date_to: (Date.parse(params[:date_to]) rescue nil)
+            )
   end
 
   def place_helper(type)
