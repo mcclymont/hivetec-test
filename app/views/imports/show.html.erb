@@ -1,15 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-Status: <%= @import.status.capitalize %>
+<dl class="row">
+  <dt class="col-sm-2">Status:</dt>
+  <dd class="col-sm-9"><%= @import.status.capitalize %></dd>
 
-<br />
+  <dt class="col-sm-2">Menus:</dt>
+  <dd class="col-sm-9"><%= @import.menus.count %></dd>
 
-Menus: <%= @import.menus.count %> |
-Menu items: <%= @import.menu_items.count %> |
-Menu pages: <%= @import.menu_pages.count %> |
-Dishes: <%= @import.dishes.count %>
+  <dt class="col-sm-2">Menu items:</dt>
+  <dd class="col-sm-9"><%= @import.menu_items.count %></dd>
 
-<br />
+  <dt class="col-sm-2">Menu pages:</dt>
+  <dd class="col-sm-9"><%= @import.menu_pages.count %></dd>
+
+  <dt class="col-sm-2">Dishes:</dt>
+  <dd class="col-sm-9"><%= @import.dishes.count %></dd>
+</dl>
 
 <%= link_to 'All Menus',  menus_import_path(@import) %>
 

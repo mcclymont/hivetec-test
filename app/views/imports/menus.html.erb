@@ -2,14 +2,27 @@
 
 <h1>Menus for import <%= @import.id %></h1>
 
-<label>Date from:</label>
-<input type="date" id="date_from" value="<%= params[:date_from] %>" />
-<label>Date to:</label>
-<input type="date" id="date_to" value="<%= params[:date_to] %>" />
-<button id="filter">Filter</button>
+<form>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Date from:</label>
+    <div class="col-sm-3">
+      <input type="date" id="date_from" class="form-control" value="<%= params[:date_from] %>" />
+    </div>
+    <label class="col-sm-2 col-form-label">Date to:</label>
+    <div class="col-sm-3">
+      <input type="date" id="date_to" class="form-control" value="<%= params[:date_to] %>" />
+    </div>
+    <div class="col-sm-2">
+      <button id="filter" class="btn btn-secondary">Filter</button>
+    </div>
+  </div>
 
-<br />
-<button id="export">Export to JSON</button>
+  <div class="form-group row">
+    <div class="col-sm-12">
+      <button id="export" class="btn btn-primary">Export to JSON</button>
+    </div>
+  </div>
+</form>
 
 <table>
   <thead>
@@ -55,9 +68,11 @@
     document.location.search = "?" + key + "=" + queryParameters[key] +
       '&date_from=' + $('#date_from').val() +
       '&date_to=' + $('#date_to').val();
+    return false;
   });
 
   $('#export').on('click', function() {
     location.search = location.search + '&export=json';
+    return false;
   });
 </script>

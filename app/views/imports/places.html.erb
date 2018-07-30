@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Unique <%= @filter.to_s.pluralize %> for import <%= @import.id %></h2>
+
 <ul>
 <% @items.each do |item| %>
   <li><%= link_to "Show Menus", menus_import_path(@import, @filter => item)%> <%= null_helper item %></li>

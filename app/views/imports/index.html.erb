@@ -17,7 +17,7 @@
     <% @imports.each do |import| %>
       <tr>
         <td><%= link_to "Import #{import.id}", import %></td>
-        <td><%= import.status %></td>
+        <td><%= import.status.humanize %></td>
       </tr>
     <% end %>
   </tbody>
