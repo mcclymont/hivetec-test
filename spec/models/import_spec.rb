@@ -11,14 +11,14 @@ RSpec.describe ImportZipJob, type: :model do
   it 'is not valid without a zip_filepath' do
     import = Import.new
     expect(import).to_not be_valid
-    expect(import.errors[:zip_filepath].first).to match /can't be blank/
+    expect(import.errors[:zip_filepath].first).to match(/can't be blank/)
   end
 
   context 'when the zip_filepath does not exist' do
     let(:zip_path) { Rails.root.join 'tmp', 'non existent file' }
     it 'is not valid' do
       expect(import).to_not be_valid
-      expect(import.errors[:zip_data].first).to match /is not a valid zip file/
+      expect(import.errors[:zip_data].first).to match(/is not a valid zip file/)
     end
   end
 
@@ -26,7 +26,7 @@ RSpec.describe ImportZipJob, type: :model do
     let(:zip_path) { Rails.root.join 'app', 'models', 'import.rb' }
     it 'is not valid' do
       expect(import).to_not be_valid
-      expect(import.errors[:zip_data].first).to match /is not a valid zip file/
+      expect(import.errors[:zip_data].first).to match(/is not a valid zip file/)
     end
   end
 end
