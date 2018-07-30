@@ -2,7 +2,7 @@
 
 <ul>
 <% @items.each do |item| %>
-      <li><%= link_to "Show Menus", menus_import_path(@import, @filter => item)%> <%= item %></li>
+  <li><%= link_to "Show Menus", menus_import_path(@import, @filter => item)%> <%= null_helper item %></li>
 <% end %>
 </ul>
 

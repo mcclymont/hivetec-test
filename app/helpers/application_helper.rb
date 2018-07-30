@@ -7,6 +7,8 @@ module ApplicationHelper
   end
 
   def null_helper(value)
-    value.present? ? value : '[BLANK]'
+    return '[NULL]' if value.nil?
+    return '[BLANK]' if value.blank?
+    value
   end
 end
