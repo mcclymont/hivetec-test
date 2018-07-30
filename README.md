@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. git clone https://github.com/mcclymont/hivetec-test
+2. cd hivetech-test
+3. bundle install
+4. [edit config/database.yml to have valid PostgreSQL username and password, or set env vars]
+5. bundle exec rails db:create db:migrate
+6. foreman start [or run lines in Procfile manually]
